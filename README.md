@@ -1,6 +1,12 @@
 You must install json server with `npm i json-server -g` command.
 After that, open new terminal and run `json-server db.json` 
 
+# Features
+- More angular practice
+- ngrx/store and ngrx/effects
+- SCSS Practice
+- http processes with angular
+
 # ReservationApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
