@@ -1,0 +1,28 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{reservation.title}}</mat-card-title>
+        <div class="type-section">
+            <p class="type"><span>Type: </span>{{reservation.type}}</p>
+        </div>
+    </mat-card-header>
+    <mat-card-content>
+        <p class="departure-section">Departure: 
+            <i class="far fa-calendar-alt"></i> {{reservation.goingDate | date:'shortDate'}} - 
+            <i class="far fa-clock"></i> {{reservation.goingHour}}</p>
+        <p class="return-section">Return: 
+            <i class="far fa-calendar-alt"></i> {{reservation.returnDate | date:'shortDate'}} - 
+            <i class="far fa-clock"></i> {{reservation.returnHour}}</p>
+    </mat-card-content>
+    <mat-card-footer>
+        <p class="from-section">From: 
+            <i class="fas fa-city"></i> {{reservation.from}}
+        </p>
+        <p class="to-section">To: 
+            <i class="fas fa-city"></i> {{reservation.to}}
+        </p>
+        <p class="price-section">
+            {{ reservation.price | currency}}
+        </p>
+    </mat-card-footer>
+    <div class="x-button" (click)="deleteCard()">x</div>
+</mat-card>

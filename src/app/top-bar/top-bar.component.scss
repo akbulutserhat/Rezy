@@ -1,0 +1,90 @@
+@import '../../main-styles.scss';
+
+.top-bar-container {
+    padding:2rem 3rem 2rem;
+    height:inherit;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+
+    .top-bar-title {
+        width: 25%;
+        text-transform: uppercase;
+        padding-top: 1.8rem;
+        margin-left: 4rem;
+       
+        a { 
+            h1 {
+                font-size: 3.2rem;
+                font-weight: 700;
+                
+            }
+           
+        }
+        
+    }
+
+    .top-bar-list-section {
+        float: right;
+        width: 75%;
+        ul {
+            
+            display: flex;
+            float: right;
+
+            li {
+                padding: 2rem;
+                font-weight:500;
+                transition: transform 0.2s ease-in;
+                
+                &:hover {
+                    transform: translateY(-0.3rem);
+                    
+                }
+            }
+        }
+    }
+    
+}
+
+.white {
+    .top-bar-title {
+        a {
+            color:$color-white;
+        }
+    }
+    .top-bar-list-section {
+        ul {
+            li {
+                a {
+                    color:$color-white;
+                }
+
+                &:hover {
+                    border-top:solid 0.2rem $color-white;
+                }
+            }
+        }  
+    }
+}
+
+.dark {
+    .top-bar-title {
+        a {
+            color:$pink-orange-dark;
+        }
+    }
+    .top-bar-list-section {
+        ul {
+            li {
+                a {
+                    color:$pink-orange-dark;
+                }
+
+                &:hover {
+                    border-top:solid 0.2rem $pink-orange-dark;
+                }
+            }
+        }  
+    }
+}

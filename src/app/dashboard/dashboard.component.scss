@@ -1,0 +1,25 @@
+@import '../../main-styles.scss';
+
+.dashboard-container {
+    height: 30rem;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:3rem;
+    color:$color-white;
+    font-size: 2.6rem;
+
+    a {
+        width: 15rem;
+        height: 4rem;
+        background: $color-white;
+        color:$pink-orange-dark;
+        border-radius: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+}

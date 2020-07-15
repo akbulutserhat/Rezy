@@ -1,0 +1,40 @@
+@import '../../main-styles.scss';
+
+.form-container {
+    padding:3rem;
+    width: 100%;
+    height: inherit;
+    background-color: $color-white;
+    text-align: center;
+    form {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .date-and-hour-section {
+            display: flex;
+            width: 45rem;
+            justify-content: center;
+
+            .hour-section {
+                width: 8rem;
+                margin-left: 3rem;
+                mat-form-field {
+                    width: 8rem;
+                }
+            }
+        }
+
+        .from-to-price-container{
+            display: flex;
+            .input-section {
+                width: 10rem;
+                margin-left:3rem;
+                mat-form-field {
+                    width: 10rem;
+                }
+            }
+        }
+    }
+}

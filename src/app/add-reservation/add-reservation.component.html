@@ -1,0 +1,79 @@
+<div class="form-container">
+    <h2>Create Reservation</h2>
+    <form #reservationForm="ngForm" (ngSubmit)="onSubmitClicked(reservationForm)">
+        <div class="reservation-title">
+          <mat-form-field appearance="standard">
+            <mat-label>Reservation title</mat-label>
+            <input name="title" [(ngModel)]="newReservationItem.title" matInput required>
+          </mat-form-field>
+        </div>
+        <div class="reservation-type">
+          <mat-form-field appearance="standard">
+            <mat-label>Reservation Type</mat-label>
+            <mat-select name="type" [(ngModel)]="newReservationItem.type"  required>
+                <mat-option value="One-way">One-way</mat-option>
+                <mat-option value="Round-trip">Round-trip</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="date-and-hour-section">
+            <div class="date-section">
+                <mat-form-field appearance="standard">
+                    <mat-label>Choose a departure-date</mat-label>
+                    <input matInput [(ngModel)]="newReservationItem.goingDate"
+                    name="departureDate" [matDatepicker]="departurePicker" required>
+                    <mat-datepicker-toggle matSuffix [for]="departurePicker"></mat-datepicker-toggle>
+                    <mat-datepicker touchUi #departurePicker></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="hour-section">
+                <mat-form-field appearance="standard">
+                    <mat-label>Departure-hour</mat-label>
+                    <input [(ngModel)]="newReservationItem.goingHour" type="time" matInput name="departure-hour" required>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="date-and-hour-section" *ngIf="newReservationItem.type==='Round-trip'">
+            <div class="date-section">
+                <mat-form-field appearance="standard">
+                    <mat-label>Choose a return-date</mat-label>
+                    <input [(ngModel)]="newReservationItem.returnDate"
+                    name="returnDate" matInput [matDatepicker]="returnPicker">
+                    <mat-datepicker-toggle matSuffix [for]="returnPicker"></mat-datepicker-toggle>
+                    <mat-datepicker touchUi #returnPicker></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="hour-section">
+                <mat-form-field appearance="standard">
+                    <mat-label>Return-hour</mat-label>
+                    <input [(ngModel)]="newReservationItem.returnHour" type="time" matInput name="return-hour">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="from-to-price-container">
+            <div class="input-section">
+                <mat-form-field appearance="standard">
+                  <mat-label>From</mat-label>
+                  <input [(ngModel)]="newReservationItem.from" name="from" [ngModel]="" matInput required>
+                </mat-form-field>
+            </div>
+            <div class="input-section">
+                <mat-form-field appearance="standard">
+                  <mat-label>To</mat-label>
+                  <input [(ngModel)]="newReservationItem.to" name="to" [ngModel]="" matInput required>
+                </mat-form-field>
+            </div>
+            <div class="input-section">
+                <mat-form-field appearance="standard">
+                  <mat-label>Price</mat-label>
+                  <input [(ngModel)]="newReservationItem.price" type="number" name="to" [ngModel]="" matInput required>
+                </mat-form-field>
+            </div>
+        </div>
+        
+        <button type="submit" [disabled]="!reservationForm.valid"  mat-raised-button color="primary">
+        Create
+        </button>
+    </form>
+</div>
+

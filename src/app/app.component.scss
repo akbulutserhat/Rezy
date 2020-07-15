@@ -1,0 +1,16 @@
+@import '../main-styles.scss';
+
+.main-container {
+    height: 100%;
+    width: 100%;
+    padding:1rem;
+    
+}
+
+.gradient-background {
+    background: linear-gradient(124deg,$pink-orange-dark,$pink-orange-light);
+}
+
+.white-background {
+    background: $color-white;
+}

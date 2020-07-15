@@ -1,0 +1,45 @@
+$pink-orange-dark:#e26a6a;
+$pink-orange-light:#f4a460;
+$color-white:#ffffff;
+$color-green-light:#499443;
+$color-dark:#131311;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+}
+
+body {
+    box-sizing: border-box;
+    //padding: 3rem;
+    font-family: Lato , Arial, Helvetica, sans-serif;
+    font-size:1.8rem;
+}
+
+a {
+    text-decoration: none;
+    letter-spacing: 0.16rem;
+}
+
+li {
+    list-style: none;
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: 500;
+    color:$pink-orange-dark;
+}
+
+.snackbar-class {
+    background: $color-green-light;
+    color:$color-white;
+}

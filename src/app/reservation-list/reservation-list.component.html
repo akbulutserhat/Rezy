@@ -1,0 +1,22 @@
+<div class="main-list-container" *ngIf="!(error$ | async); else error">
+    <h2>Reservation List</h2>
+    <div class="spinner-area" *ngIf="loading$ | async; else list">
+        <mat-spinner></mat-spinner>
+    </div>
+    <ng-template #list>
+        <div class="card-list-container" *ngIf="reservationItems$ | async; else noItems">
+            <div class="card-container" *ngFor="let reservation of reservationItems$ | async">
+                <app-reservation-card [reservation]="reservation"></app-reservation-card>
+            </div>
+        </div>
+        <ng-template class="no-items-section" #noItems>
+            <p>There is no item in the list. If you want to add item, click 
+                <a routerLink="/add-reservation"><strong>this</strong></a></p>
+        </ng-template>
+    </ng-template>
+   
+</div>
+
+<ng-template #error>
+    <p>{{(error$ | async)?.message}}</p>
+</ng-template>

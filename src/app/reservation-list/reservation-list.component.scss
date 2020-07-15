@@ -1,0 +1,16 @@
+.main-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .card-list-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .card-container {
+            margin:1rem 2rem;
+        }
+    }
+   
+}

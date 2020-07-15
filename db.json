@@ -1,0 +1,52 @@
+{
+  "reservation": [
+    {
+      "id": "c69164cf-767f-4074-9df1-5d931c645dbe",
+      "title": "Deneme 1",
+      "type": "Round-trip",
+      "goingDate": "2020-07-14T21:00:00.000Z",
+      "goingHour": "02:15",
+      "returnDate": "2020-07-20T21:00:00.000Z",
+      "returnHour": "00:00",
+      "to": "ankara",
+      "from": "izmir",
+      "price": 120
+    },
+    {
+      "id": "777e225f-938d-490c-b0e8-e7b3b81803d2",
+      "title": "deneme 2 ",
+      "type": "One-way",
+      "goingDate": "2020-07-21T21:00:00.000Z",
+      "goingHour": "18:00",
+      "returnDate": null,
+      "returnHour": "",
+      "to": "Ameriga",
+      "from": "Ankara",
+      "price": 650
+    },
+    {
+      "id": "ee46873d-03a0-474d-9c49-8d5da531214a",
+      "title": "deneme 3",
+      "type": "One-way",
+      "goingDate": "2020-07-29T21:00:00.000Z",
+      "goingHour": "18:11",
+      "returnDate": null,
+      "returnHour": "",
+      "to": "asd",
+      "from": "asd",
+      "price": 321
+    },
+    {
+      "id": "253485c0-4477-4d03-aadc-ea1d11a4a377",
+      "title": "asdasd",
+      "type": "One-way",
+      "goingDate": "2020-07-26T21:00:00.000Z",
+      "goingHour": "20:15",
+      "returnDate": null,
+      "returnHour": "",
+      "to": "saeesa",
+      "from": "seae",
+      "price": 13
+    }
+  ]
+}
